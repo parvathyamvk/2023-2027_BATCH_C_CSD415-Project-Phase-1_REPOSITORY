@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "231953392455",
+    "project_id": "shareplate-40c1e",
+    "storage_bucket": "shareplate-40c1e.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:231953392455:android:1cf5e2b36cbaf391e7a262",
+        "android_client_info": {
+          "package_name": "com.example.shareplate_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDrx_lRDpXPZHHGm44xjaumeU8LeBjnwx0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
