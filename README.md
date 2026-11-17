@@ -4,14 +4,16 @@
 
 # SharePlate
 
-### Smart Food Donation, Allocation & Distribution Platform
+### AI-Based Smart Food and Cloth Donation, Allocation & Distribution System
 
-A Flutter-based mobile application designed to connect food donors, NGOs, receivers, volunteers, and administrators through a centralized donation and distribution workflow.
+A Flutter mobile application project focused on connecting donors, NGOs, receivers, and volunteers to help organize donation and distribution workflows.
 
-![Flutter](https://img.shields.io/badge/Flutter-Framework-02569B?logo=flutter&logoColor=white)
-![Dart](https://img.shields.io/badge/Dart-Language-0175C2?logo=dart&logoColor=white)
-![Firebase](https://img.shields.io/badge/Firebase-Backend-FFCA28?logo=firebase&logoColor=black)
-![Status](https://img.shields.io/badge/Project-In%20Development-orange)
+[![Flutter](https://img.shields.io/badge/Flutter-Mobile%20App-02569B?logo=flutter&logoColor=white)](https://flutter.dev/)
+[![Dart](https://img.shields.io/badge/Dart-Language-0175C2?logo=dart&logoColor=white)](https://dart.dev/)
+[![Firebase](https://img.shields.io/badge/Firebase-Backend-FFCA28?logo=firebase&logoColor=black)](https://firebase.google.com/)
+[![Status](https://img.shields.io/badge/Status-In%20Development-orange)]()
+
+**[View GitHub Repository](https://github.com/parvathyamvk/2023-2027_BATCH_C_CSD415-Project-Phase-1_REPOSITORY)**
 
 </div>
 
@@ -19,61 +21,52 @@ A Flutter-based mobile application designed to connect food donors, NGOs, receiv
 
 ## About the Project
 
-SharePlate is an academic mobile application project that aims to make surplus-food donation and distribution more organized. It provides a common platform for people and organizations that have food to donate and communities or organizations that need food.
+SharePlate is an academic project being developed to make donation and distribution activities more organized. It aims to provide a common platform where donors can offer items, receivers can submit requests, NGOs can coordinate allocation, and volunteers can support delivery.
 
-The application is being developed with separate workflows for donors, NGOs, receivers, volunteers, and administrators. Firebase services are used for authentication and cloud data storage.
+The application is built with Flutter and Dart, with Firebase services used for authentication and cloud data storage.
 
-> **Development status:** SharePlate is currently under development. The features described below reflect the functionality present in this repository. Additional ideas such as cloth donations, machine-learning-assisted food assessment, QR-based verification, and advanced route optimization are planned concepts and are not represented as completed features in this code snapshot.
+> **Project status:** In development. This README describes the current project structure and intended workflows. Features may change as development continues.
 
-## Current Features
+## Current Project Modules
 
-- **User registration and login** using Firebase Authentication.
-- **Role-based navigation** for Donor, NGO, Receiver, and Volunteer accounts, with an Admin dashboard.
-- **Donor workflow** to submit food donations with item details, food type, quantity, pickup information, pickup date/time, expiry information, description, and an optional image.
-- **Receiver workflow** to submit food requests and view relevant donation/allocation information.
-- **NGO dashboard** to review available donations and receiver requests and manage allocations.
-- **Volunteer workflow** to view and accept delivery tasks and update task progress.
-- **Admin dashboard** to view and manage user information.
-- **Profile management** for user details.
-- **Location support** using device location services where permission is granted.
-- **Cloud data storage** with Cloud Firestore.
+The repository contains separate screens/modules for the following roles and workflows:
+
+- **Donor:** donor dashboard, donation form, and my donations.
+- **Receiver:** receiver dashboard and request-related workflow.
+- **NGO:** NGO dashboard for coordination.
+- **Volunteer:** volunteer dashboard and task details.
+- **Admin:** admin dashboard.
+- **Account:** login, onboarding, home screen, and profile editing.
+
+The exact availability and completeness of each workflow may change during development.
 
 ## Technology Stack
 
-| Technology | Purpose |
+| Technology / Package | Purpose |
 |---|---|
-| Flutter | Cross-platform mobile application UI |
-| Dart | Application programming language |
-| Firebase Authentication | User registration and sign-in |
-| Cloud Firestore | Cloud database for users, donations, requests, allocations, and tasks |
-| Shared Preferences | Local storage for selected app/session information |
-| Geolocator | Device location and location permissions |
-| Image Picker | Selecting or capturing donation images |
-| Google Maps Flutter package | Mapping dependency included in the project |
+| Flutter | Cross-platform application framework |
+| Dart | Programming language |
+| Firebase Core | Connects the Flutter app to Firebase |
+| Firebase Authentication | User authentication |
+| Cloud Firestore | Cloud database |
+| Google Maps Flutter | Google Maps integration |
+| Geolocator | Device location access |
+| Image Picker | Selecting or capturing images |
+| Shared Preferences | Local key-value storage |
 
-## User Roles
-
-| Role | Main responsibility |
-|---|---|
-| Donor | Adds food donations and pickup details |
-| NGO | Reviews donations and receiver requests and manages allocations |
-| Receiver | Submits food requests and views allocation information |
-| Volunteer | Accepts assigned delivery tasks and updates their progress |
-| Admin | Views and manages user information through the admin dashboard |
-
-## Project Structure
+## Repository Structure
 
 ```text
-shareplate_app/
-├── android/                 # Android platform files
-├── ios/                     # iOS platform files
+2023-2027_BATCH_C_CSD415-Project-Phase-1_REPOSITORY/
+├── android/                   # Android platform configuration
+├── ios/                       # iOS platform configuration
 ├── assets/
-│   └── shareplate_logo.png  # Application logo
+│   └── shareplate_logo.png    # Application logo
 ├── lib/
 │   ├── main.dart
 │   ├── home_screen.dart
-│   ├── login_screen.dart
 │   ├── onboarding.dart
+│   ├── login_screen.dart
 │   ├── donor_home.dart
 │   ├── donation_form.dart
 │   ├── my_donations.dart
@@ -84,7 +77,9 @@ shareplate_app/
 │   ├── admin_home.dart
 │   ├── edit_profile.dart
 │   └── firebase_options.dart
-├── pubspec.yaml
+├── Reports/                   # Project reports and presentation
+├── pubspec.yaml               # Flutter dependencies and assets
+├── firebase.json
 └── README.md
 ```
 
@@ -92,138 +87,122 @@ shareplate_app/
 
 ### Prerequisites
 
-Install the following tools before running the project:
+Install the following:
 
 - [Flutter SDK](https://docs.flutter.dev/get-started/install)
-- [Dart SDK](https://dart.dev/get-dart) (included with Flutter)
 - [Android Studio](https://developer.android.com/studio) or [Visual Studio Code](https://code.visualstudio.com/)
-- An Android emulator or a physical Android device
-- A Firebase project with the required services enabled
+- Android emulator or a physical Android device
+- A Firebase project configured for your application
 
-### Installation
+### 1. Clone the Repository
 
-1. Clone this repository:
+```bash
+git clone https://github.com/parvathyamvk/2023-2027_BATCH_C_CSD415-Project-Phase-1_REPOSITORY.git
+```
 
-   ```bash
-   git clone <YOUR_GITHUB_REPOSITORY_URL>
-   ```
+### 2. Open the Project Folder
 
-2. Move into the project directory:
+```bash
+cd 2023-2027_BATCH_C_CSD415-Project-Phase-1_REPOSITORY
+```
 
-   ```bash
-   cd <PROJECT_FOLDER>
-   ```
+### 3. Install Dependencies
 
-3. Install Flutter dependencies:
+```bash
+flutter pub get
+```
 
-   ```bash
-   flutter pub get
-   ```
+### 4. Configure Firebase
 
-4. Configure Firebase for your own Firebase project.
+This project uses Firebase. To connect your own Firebase project:
 
-   If you are using a different Firebase project, configure the Flutter app with FlutterFire CLI:
+1. Create a project in the [Firebase Console](https://console.firebase.google.com/).
+2. Register the required Android/iOS app(s) in Firebase.
+3. Configure FlutterFire for your Firebase project:
 
    ```bash
    dart pub global activate flutterfire_cli
    flutterfire configure
    ```
 
-   Make sure the generated Firebase configuration matches your project. For Android, verify that the appropriate `google-services.json` file is present in `android/app/`.
+4. Verify that the generated `lib/firebase_options.dart` matches your Firebase project.
+5. Enable the authentication providers required by the app.
+6. Create and configure Cloud Firestore.
 
-5. Enable **Email/Password** sign-in in Firebase Authentication and create a Cloud Firestore database.
+**Security note:** Review Firestore Security Rules before testing with real users or deploying. Do not use unrestricted read/write rules in a production application. Do not publish service-account private keys or other server-side credentials.
 
-6. Configure Firestore Security Rules for the application's data model before testing with real users. Do not use open read/write rules in a deployed application.
-
-7. Run the application:
-
-   ```bash
-   flutter run
-   ```
-
-### Useful Flutter Commands
+### 5. Run the Application
 
 ```bash
-# Check Flutter installation
+flutter run
+```
+
+## Useful Flutter Commands
+
+```bash
+# Check Flutter and development environment
 flutter doctor
 
-# Install dependencies
+# Get project dependencies
 flutter pub get
 
-# Check for code issues
+# Analyze the project
 flutter analyze
 
 # Run tests
 flutter test
 
-# Build an Android APK
+# Build a release APK
 flutter build apk --release
 ```
 
-## Firebase Configuration & Security
-
-This project uses Firebase Authentication and Cloud Firestore. To run it with your own Firebase environment:
-
-- Create or select a Firebase project.
-- Register the required app platforms in Firebase.
-- Generate the platform configuration using FlutterFire CLI.
-- Enable Email/Password authentication.
-- Create the Firestore database and configure access rules for the collections used by the app.
-
-**Important:** Firebase client configuration files are included in this repository snapshot. Before publishing or reusing the project, review Firebase API-key restrictions, Firebase project settings, and Firestore Security Rules. Never commit service-account private keys, admin credentials, or other server-side secrets. Firestore rules must enforce the correct access for each user role.
-
 ## Demo
 
-**Live demo:** Not available yet — the project is a mobile application and is still under development.
+**Live demo:** Not available yet. SharePlate is a mobile application and is currently under development.
 
-A demonstration video, screenshots, or an APK download link can be added here when they are ready.
+A demo video, screenshots, or an APK download link can be added here when they are ready.
 
 ## Screenshots
 
-Screenshots will be added as the application UI and workflows are finalized.
+Screenshots will be added as the application screens and workflows are finalized.
 
-<!--
-To add screenshots later:
-1. Create a folder named screenshots in the repository root.
-2. Add your images to that folder.
-3. Replace this note with Markdown image links, for example:
-   ![Login screen](screenshots/login.png)
--->
+To add screenshots later, create a `screenshots/` folder in the repository and add images. Then include them here, for example:
+
+```markdown
+![Login Screen](screenshots/login.png)
+```
 
 ## Planned Enhancements
 
-The following are proposed extensions and should be treated as planned work until implemented and tested:
+The following are project directions that may be implemented as development progresses:
 
-- Support for cloth donations in addition to food donations.
-- Machine-learning-assisted food suitability or freshness assessment.
+- Support for food and cloth donations.
+- AI-assisted assessment or allocation features.
 - QR-code-based pickup and delivery verification.
-- More advanced distance- and urgency-aware allocation.
-- Improved route planning and delivery tracking.
-- Additional analytics and reporting.
+- Improved location-aware allocation and route planning.
+- Enhanced delivery tracking and reporting.
 
-## Academic Project Team
+These are planned enhancements and should not be considered completed features unless they are implemented in the application.
 
-- Anjitha S
-- Darius Joe
-- Niranjan K
-- Parvathy A
+## Team
+
+- **Anjitha S**
+- **Darius Joe**
+- **Niranjan K**
+- **Parvathy A**
 
 **Department of Computer Engineering**  
 College of Engineering Chengannur  
 APJ Abdul Kalam Technological University, Kerala, India
 
-## Contributing
-
-This repository is maintained as an academic project. Suggestions and improvements are welcome. If you plan to contribute, create a branch for your changes and submit a pull request for review.
-
 ## License
 
-No license has been specified for this repository yet. Unless a license is added, the project should be treated as all rights reserved.
+No license has been specified for this repository. Unless a license is added, all rights remain with the copyright holder.
 
 ---
 
 <div align="center">
 
-**SharePlate — Share more. Waste less.**
+**SharePlate — Making donation and distribution more organized.**
 
 </div>
